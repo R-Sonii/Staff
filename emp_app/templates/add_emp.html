@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Staff</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+        <h1>Add Employies Here</h1>
+        <hr>
+        <form action="/add_emp" method="POST">
+          {% comment %} {% csrf_token %} {% endcomment %}
+          
+          <label for="fnm" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="fnm" name="first_name" value={{first_name}}>
+         
+          <label for="lnm" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="lnm" name="last_name" value={{last_name}}>
+        
+          <label for="dept" class="form-label">Department</label>
+          <input type="text" class="form-control" id="dept" name="dept" value={{dept}}>
+         
+          <label for="salary" class="form-label">Salary</label>
+          <input type="number" class="form-control" id="salary" name="salary" value={{salary}}>
+         
+          <label for="bonus" class="form-label">Bonus</label>
+          <input type="number" class="form-control" id="bonus" name="bonus" value={{bonus}}>
+         
+          <label for="role" class="form-label">Role</label>
+          <input type="text" class="form-control" id="role" name="role" value={{role}}>
+          
+          <label for="phone" class="form-label">Phone Number</label>
+          <input type="number" class="form-control" id="phone" name="phone" value={{phone}}>
+         
+          {% comment %} <label for="hiredate" class="form-label">Hiring Date</label>
+          <input type="date" class="form-control" id="hiredate" name="hire_date" value={{hire_date}}> {% endcomment %}
+       
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  </body>
+</html>
